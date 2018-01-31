@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     private String copyFile() {
         AssetManager assetManager = this.getAssets();
 //        String newFilePath = Environment.getExternalStorageDirectory() + "/mwh/app-release.apk";
-        String newFilePath = Environment.getExternalStorageDirectory() + "/mwh/Old2New.apk";
+        String newFilePath = Environment.getExternalStorageDirectory() + "/mwh/app-release.apk";
         String Path = Environment.getExternalStorageDirectory() + "/mwh";
         try {
             File file1 = new File(Path);
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
             File file = new File(newFilePath);
             if (!file.exists()) {//文件不存在才复制
-                InputStream in = assetManager.open("Old2New.apk");
+                InputStream in = assetManager.open("app-release.apk");
                 OutputStream out = new FileOutputStream(newFilePath);
                 byte[] buffer = new byte[1024];
                 int read;
